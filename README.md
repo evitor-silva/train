@@ -13,4 +13,5 @@ Requisitos
 ``` 
 git clone https://github.com/evitor-silva/train.git
 composer install
+php artisan migrate:fresh
 ```
