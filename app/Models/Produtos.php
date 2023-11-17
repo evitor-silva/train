@@ -6,16 +6,17 @@ use Illuminate\Database\Eloquent\Concerns\HasUuids;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Products extends Model
+class Produtos extends Model
 {
-    use HasFactory, HasUuids;
-
+    use HasFactory;
     public function categories()
     {
-        return $this->belongsToMany(Category::class);
+        return $this->belongsToMany(Categorias::class);
     }
     protected $fillable = [
         "name",
+        "slug",
         "price",
+        "stock",
     ];
 }
